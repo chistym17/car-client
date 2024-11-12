@@ -6,7 +6,7 @@ const Services = () => {
     fetch("https://car-server-aehc.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
-  });
+  },[]);
   return (
     <div className="m-4">
       <div className="p-4 text-center">
