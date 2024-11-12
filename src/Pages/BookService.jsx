@@ -35,7 +35,7 @@ const BookService = () => {
     try {
       // Check for duplicate booking first
       const existingBookingResponse = await fetch(
-        `http://localhost:5000/bookings?serviceId=${_id}&email=${email}`
+        `https://car-server-aehc.onrender.com/bookings?serviceId=${_id}&email=${email}`
       );
 
       const existingBookings = await existingBookingResponse.json();
@@ -50,7 +50,7 @@ const BookService = () => {
       }
 
       // Proceed with creating a new booking
-      const response = await fetch("http://localhost:5000/bookings", {
+      const response = await fetch("https://car-server-aehc.onrender.com/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(booking),
